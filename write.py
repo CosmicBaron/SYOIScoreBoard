@@ -2,8 +2,6 @@ import time, datetime, math
 from selenium import webdriver
 from fetch import getall
 
-chromepath = "~/home/christopher/CodeProjects/SYOIScoreBoard/chromedriver"
-
 htmindex = \
 f"""
 <!DOCTYPE html>
@@ -93,13 +91,13 @@ def maketable(usersum: dict):
     return table
 
 def write():
-    with open("index.html", "w") as f:
+    with open("index.html", "w", encoding="utf-8") as f:
         page = htmindex + maketable(addrank(sumuser(getall()))) + htmending
         f.write(page)
 
 def main():
     driver = webdriver.Firefox()
-    driver.get("http://0.0.0.0:8000")
+    driver.get("http://localhost:8000")
     while True:
         write()
         driver.refresh()
@@ -107,3 +105,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+	
