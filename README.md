@@ -5,7 +5,7 @@ Install python packages from `requirements.txt`.
 
 Usage:
 
-create `token.json` file with format:
+create `tokens.json` file with format:
 ```json
 {
   "TokenId": "xxx",
