@@ -1,11 +1,11 @@
 import requests, math, json
 cookies = {}
 
-with open("tokens.json", "r") as f:
+with open("tokens.json", "r", encoding="utf-8") as f:
     cookies = json.load(f)
 # print(cookies)
 
-with open("config.json", "r") as f:
+with open("config.json", "r", encoding="utf-8") as f:
     problemid = json.load(f)["problems"]
 # print(problemid)
 
